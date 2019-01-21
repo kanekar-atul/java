@@ -13,7 +13,7 @@ class StudentSix {
 
 	StudentSix(int rollno, String name, String course, float fee) {
 		this.fee = fee;
-		this(rollno, name, course);// C.T.Error
+		//this(rollno, name, course);// C.T.Error
 	}
 
 	void display() {
