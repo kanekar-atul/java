@@ -1,8 +1,9 @@
-package com.model;
+package com.main;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.model.User;
 
 public class BeanLifeStyle {
 
