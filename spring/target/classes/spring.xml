@@ -8,12 +8,126 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-		 <bean id="helloworld" class="com.model.HelloWorld">
+		<!--  <bean id="helloworld" class="com.model.HelloWorld">
 		    <property name="message" value="HelloWorld"></property>
 		  </bean>
 		  
-		  <bean id="user" class="com.model.User">
+		  <bean id="user" class="com.model.User" init-method="initNew" destroy-method="remove">
 		     <property name="id" value="1"></property>
 		     <property name="name" value="Atul"></property>
 		  </bean>
+		  
+		  <bean id="classA" class="com.model.ClassA" scope="singleton"></bean>
+		  
+		  <bean id="classB" class="com.model.ClassB" scope="prototype"></bean>
+		  
+		  
+		    <bean id="persone" class="com.model.Persone" scope="singleton">
+		    <property name="address" ref="address"></property>
+		  </bean>
+		  
+		  <bean id="address" class="com.model.Address" scope="prototype"></bean>
+		  
+		   
+		  <bean id="classC" class="com.model.ClassC" scope="prototype">
+		   <property name="d" ref="classD"></property>
+		  </bean>
+		  
+		  <bean id="classD" class="com.model.ClassD" scope="singleton"></bean>
+		  
+		  <bean id="helloworldPostProcessorModel" class="com.main.beanLifeCycle.HelloWorld"   init-method = "init" destroy-method = "remove">
+      			<property name = "message" value = "Hello World!"/>
+		  </bean>
+		
+		  <bean id="beanPostProcessorModel" class="com.main.beanLifeCycle.BeanPostProcessorModel" />
+		  <bean id="beanPostProcessorModel2" class="com.main.beanLifeCycle.BeanPostProcessorModel2"/>   
+		
+		   <bean id = "helloWorld" class = "com.main.inheritance.HelloWorld">
+		      <property name = "message1" value = "Hello World!"/>
+		      <property name = "message2" value = "Hello Second World!"/>
+		   </bean>
+		
+		   <bean id ="helloIndia" class = "com.main.inheritance.HelloIndia" parent = "helloWorld">
+		      <property name = "message1" value = "Hello India!"/>
+		      <property name = "message3" value = "Namaste India!"/>
+		   </bean>
+		   
+		   <bean id = "textEditor" class = "com.main.dependency.injection.constructorBased.TextEditor">
+		      <constructor-arg ref = "spellChecker"/>
+		   </bean>
+		
+		    
+		   <bean id = "spellChecker" class = "com.main.dependency.injection.constructorBased.SpellChecker"></bean>
+		   
+		   <bean id = "textEditor" class = "com.main.dependency.injection.setterBased.TextEditor">
+		      <property name = "spellChecker" ref = "spellChecker"/>
+		   </bean>
+		 
+		   <bean id = "spellChecker" class = "com.main.dependency.injection.setterBased.SpellChecker"></bean>
+				  
+		 
+   <bean id = "javaCollection" class = "com.main.injectingCollection.JavaCollection">
+      
+       
+      <property name = "addressList">
+         <list>
+            <value>INDIA</value>
+            <value>Pakistan</value>
+            <value>USA</value>
+            <value>USA</value>
+         </list>
+      </property>
+ 
+       <property name = "addressSet">
+         <set>
+            <value>INDIA</value>
+            <value>Pakistan</value>
+            <value>USA</value>
+            <value>USA</value>
+         </set>
+      </property>
+ 
+      <property name = "addressMap">
+         <map>
+            <entry key = "1" value = "INDIA"/>
+            <entry key = "2" value = "Pakistan"/>
+            <entry key = "3" value = "USA"/>
+            <entry key = "4" value = "USA"/>
+         </map>
+      </property>
+       
+      <property name = "addressProp">
+         <props>
+            <prop key = "one">INDIA</prop>
+            <prop key = "one">INDIA</prop>
+            <prop key = "two">Pakistan</prop>
+            <prop key = "three">USA</prop>
+            <prop key = "four">USA</prop>
+         </props>
+      </property>
+   </bean>		        
+
+  <bean id = "textEditor" class = "com.main.autowiring.byName.TextEditor" autowire = "byName">
+      <property name = "name" value = "Generic Text Editor" />
+   </bean>
+ 
+   <bean id = "spellChecker" class = "com.main.autowiring.byName.SpellChecker"></bean>
+
+ <bean id = "textEditor" class = "com.main.autowiring.byType.TextEditor" autowire = "byType">
+      <property name = "name" value = "Generic Text Editor" />
+   </bean>
+ 
+   <bean id = "spellChecker" class = "com.main.autowiring.byType.SpellChecker"></bean>
+ 
+   <bean id = "spellChecker1" class = "com.main.autowiring.byType.SpellChecker"></bean>
+		   -->
+		   
+
+    
+  <bean id = "textEditor" class = "com.main.autowiring.constructor.TextEditor" autowire = "constructor">
+      <constructor-arg value = "Generic Text Editor"/>
+   </bean>
+ 
+   <bean id = "spellChecker" class = "com.main.autowiring.constructor.SpellChecker"></bean>
+  
 </beans>
