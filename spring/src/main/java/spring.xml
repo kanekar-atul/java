@@ -142,22 +142,30 @@
    <bean id = "spellChecker" class = "com.main.autowired.setter.SpellChecker">
    </bean>
       
-         
-      -->
-		   
-
-     <!-- Definition for textEditor bean -->
+   
    <bean id = "textEditor" class = "com.main.autowired.properties.TextEditor">
    </bean>
 
-   <!-- Definition for spellChecker bean -->
+    
    <bean id = "spellChecker2" class = "com.main.autowired.properties.SpellChecker">
    </bean>
  
+       
+      -->
+		   
+
+   
    
 
 
 
+
+   <bean id = "helloWorld" class = "com.main.evenHanding.HelloWorld">
+      <property name = "message" value = "Hello World!"/>
+   </bean>
+
+   <bean id = "cStartEventHandler" class = "com.main.evenHanding.CStartEventHandler"/>
+   <bean id = "cStopEventHandler" class = "com.main.evenHanding.CStopEventHandler"/>
 
    
    
