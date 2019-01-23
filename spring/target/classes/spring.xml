@@ -8,6 +8,8 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+ <context:annotation-config/>
+ 
 		<!--  <bean id="helloworld" class="com.model.HelloWorld">
 		    <property name="message" value="HelloWorld"></property>
 		  </bean>
@@ -107,27 +109,57 @@
       </property>
    </bean>		        
 
-  <bean id = "textEditor" class = "com.main.autowiring.byName.TextEditor" autowire = "byName">
+   <bean id = "textEditor" class = "com.main.autowiring.byName.TextEditor" autowire = "byName">
       <property name = "name" value = "Generic Text Editor" />
    </bean>
  
    <bean id = "spellChecker" class = "com.main.autowiring.byName.SpellChecker"></bean>
 
- <bean id = "textEditor" class = "com.main.autowiring.byType.TextEditor" autowire = "byType">
+   <bean id = "textEditor" class = "com.main.autowiring.byType.TextEditor" autowire = "byType">
       <property name = "name" value = "Generic Text Editor" />
    </bean>
  
    <bean id = "spellChecker" class = "com.main.autowiring.byType.SpellChecker"></bean>
  
    <bean id = "spellChecker1" class = "com.main.autowiring.byType.SpellChecker"></bean>
-		   -->
-		   
 
-    
-  <bean id = "textEditor" class = "com.main.autowiring.constructor.TextEditor" autowire = "constructor">
+   <bean id = "textEditor" class = "com.main.autowiring.constructor.TextEditor" autowire = "constructor">
       <constructor-arg value = "Generic Text Editor"/>
    </bean>
  
    <bean id = "spellChecker" class = "com.main.autowiring.constructor.SpellChecker"></bean>
+   
+   
+   <bean id = "student" class = "com.main.annotation.required.Student">
+      <property name = "name" value = "Zara" />
+ 
+      <property name = "age"  value = "11"/>
+   </bean>
+
+   <bean id = "textEditor" class = "com.main.autowired.setter.TextEditor">
+   </bean>
+ 
+   <bean id = "spellChecker" class = "com.main.autowired.setter.SpellChecker">
+   </bean>
+      
+         
+      -->
+		   
+
+     <!-- Definition for textEditor bean -->
+   <bean id = "textEditor" class = "com.main.autowired.properties.TextEditor">
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id = "spellChecker2" class = "com.main.autowired.properties.SpellChecker">
+   </bean>
+ 
+   
+
+
+
+
+   
+   
   
 </beans>
