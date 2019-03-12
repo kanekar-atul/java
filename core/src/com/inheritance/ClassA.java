@@ -2,6 +2,10 @@ package com.inheritance;
 
 public class ClassA {
 
+	static {
+		System.out.println("Static Block ClassA");
+	}
+	
 	ClassA(){
 		System.out.println("This is from ClassA constructor");
 	}

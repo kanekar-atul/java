@@ -2,8 +2,12 @@ package com.inheritance;
 
 public class ClassB extends ClassA {
 
+	static {
+		System.out.println("Static Block ClassB");
+	}
+	
 	ClassB() {
-		System.out.println("This is from ClassA constructor");
+		System.out.println("This is from ClassB constructor");
 	}
 
 	{
@@ -21,12 +25,12 @@ public class ClassB extends ClassA {
 	public static void main(String[] args) {
 
 		ClassB b = new ClassB();
-		b.getA();
+		/*b.getA();
 		b.getB();
 		b.getVal();
 
 		ClassA a = new ClassB();
-		a.getVal();
+		a.getVal();*/
 
 	}
 
