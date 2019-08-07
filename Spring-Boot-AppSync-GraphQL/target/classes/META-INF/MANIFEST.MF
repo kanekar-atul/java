@@ -1,11 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: SpringBootDataJPA
+Implementation-Title: AWS Java SDK for AWS AppSync
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: atulk
 Implementation-Vendor-Id: com
 Build-Jdk: 1.8.0_144
-Implementation-URL: http://projects.spring.io/spring-boot/SpringBootDa
- taJPA/
+Implementation-URL: https://aws.amazon.com/sdkforjava
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com</groupId>
-	<artifactId>SpringBootDataJPA</artifactId>
+	<artifactId>SpringBootApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
@@ -12,7 +12,6 @@
 		<version>1.5.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -36,7 +35,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
- 
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
+		</dependency>
 
 	</dependencies>
 
@@ -49,7 +54,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 
 </project>
